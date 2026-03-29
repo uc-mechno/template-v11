@@ -1,0 +1,398 @@
+.l-flex {
+  display: flex;
+
+  &.-wrap {
+    flex-wrap: wrap;
+  }
+
+  &.-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &.-vertical {
+    flex-direction: column;
+  }
+
+  &.-side {
+    flex-direction: row;
+  }
+
+  &.-left {
+    justify-content: flex-start;
+  }
+
+  &.-center {
+    justify-content: center;
+  }
+
+  &.-right {
+    justify-content: flex-end;
+  }
+
+  &.-around {
+    justify-content: space-around;
+  }
+
+  &.-justify {
+    justify-content: space-between;
+  }
+
+  &.-top {
+    align-items: flex-start;
+  }
+
+  &.-middle {
+    align-items: center;
+  }
+
+  &.-bottom {
+    align-items: flex-end;
+  }
+}
+
+@include media(min, sm) {
+
+  .l-flex {
+
+    &.-wrap {
+
+      &-sm {
+        flex-wrap: wrap;
+      }
+    }
+
+    &.-reverse {
+
+      &-sm {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.-vertical {
+
+      &-sm {
+        flex-direction: column;
+      }
+    }
+
+    &.-side {
+
+      &-sm {
+        flex-direction: row;
+      }
+    }
+
+    &.-left {
+
+      &-sm {
+        justify-content: flex-start;
+      }
+    }
+
+    &.-center {
+
+      &-sm {
+        justify-content: center;
+      }
+    }
+
+    &.-right {
+
+      &-sm {
+        justify-content: flex-end;
+      }
+    }
+
+    &.-justify {
+
+      &-sm {
+        justify-content: space-between;
+      }
+    }
+
+    &.-top {
+
+      &-sm {
+        align-items: flex-start;
+      }
+    }
+
+    &.-middle {
+
+      &-sm {
+        align-items: center;
+      }
+    }
+
+    &.-bottom {
+
+      &-sm {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+@include media(min, md) {
+
+  .l-flex {
+
+    &.-wrap {
+
+      &-md {
+        flex-wrap: wrap;
+      }
+    }
+
+    &.-reverse {
+
+      &-md {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.-vertical {
+
+      &-md {
+        flex-direction: column;
+      }
+    }
+
+    &.-side {
+
+      &-md {
+        flex-direction: row;
+      }
+    }
+
+    &.-left {
+
+      &-md {
+        justify-content: flex-start;
+      }
+    }
+
+    &.-center {
+
+      &-md {
+        justify-content: center;
+      }
+    }
+
+    &.-right {
+
+      &-md {
+        justify-content: flex-end;
+      }
+    }
+
+    &.-justify {
+
+      &-md {
+        justify-content: space-between;
+      }
+    }
+
+    &.-top {
+
+      &-md {
+        align-items: flex-start;
+      }
+    }
+
+    &.-middle {
+
+      &-md {
+        align-items: center;
+      }
+    }
+
+    &.-bottom {
+
+      &-md {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+.-order {
+
+  &-1 {
+    order: 1;
+  }
+
+  &-2 {
+    order: 2;
+  }
+
+  &-3 {
+    order: 3;
+  }
+}
+
+@include media(min, lg) {
+
+  .l-flex {
+
+    &.-wrap {
+
+      &-lg {
+        flex-wrap: wrap;
+      }
+    }
+
+    &.-reverse {
+
+      &-lg {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.-vertical {
+
+      &-lg {
+        flex-direction: column;
+      }
+    }
+
+    &.-side {
+
+      &-lg {
+        flex-direction: row;
+      }
+    }
+
+    &.-left {
+
+      &-lg {
+        justify-content: flex-start;
+      }
+    }
+
+    &.-center {
+
+      &-lg {
+        justify-content: center;
+      }
+    }
+
+    &.-right {
+
+      &-lg {
+        justify-content: flex-end;
+      }
+    }
+
+    &.-justify {
+
+      &-lg {
+        justify-content: space-between;
+      }
+    }
+
+    &.-top {
+
+      &-lg {
+        align-items: flex-start;
+      }
+    }
+
+    &.-middle {
+
+      &-lg {
+        align-items: center;
+      }
+    }
+
+    &.-bottom {
+
+      &-lg {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+@include media(min, xl) {
+
+  .l-flex {
+
+    &.-wrap {
+
+      &-xl {
+        flex-wrap: wrap;
+      }
+    }
+
+    &.-reverse {
+
+      &-xl {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.-vertical {
+
+      &-xl {
+        flex-direction: column;
+      }
+    }
+
+    &.-side {
+
+      &-xl {
+        flex-direction: row;
+      }
+    }
+
+    &.-left {
+
+      &-xl {
+        justify-content: flex-start;
+      }
+    }
+
+    &.-center {
+
+      &-xl {
+        justify-content: center;
+      }
+    }
+
+    &.-right {
+
+      &-xl {
+        justify-content: flex-end;
+      }
+    }
+
+    &.-justify {
+
+      &-xl {
+        justify-content: space-between;
+      }
+    }
+
+    &.-top {
+
+      &-xl {
+        align-items: flex-start;
+      }
+    }
+
+    &.-middle {
+
+      &-xl {
+        align-items: center;
+      }
+    }
+
+    &.-bottom {
+
+      &-xl {
+        align-items: flex-end;
+      }
+    }
+  }
+}

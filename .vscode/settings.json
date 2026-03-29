@@ -1,0 +1,9 @@
+{
+  "stylelint.autoFixOnSave": true, //保存時にフォーマットする
+  "[css]": {
+    "editor.formatOnSave": false // cssファイルは保存時にフォーマットしない
+  },
+  "[scss]": {
+    "editor.formatOnSave": true // scssファイルは保存時にフォーマットする
+  }
+}

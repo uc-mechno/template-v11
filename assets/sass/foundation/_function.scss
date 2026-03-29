@@ -1,0 +1,15 @@
+// text-shadow
+// https://romantist.jp/blog/scss-function-outlinetext/
+// ----
+// * ex) text-shadow: outlineText(#000, 8px, 100);
+// ----
+//
+@function outlineText($color, $borderWidth, $strength) {
+  $values: null;
+
+  @for $i from 0 through $strength {
+    $values: append($values, 0 0 $borderWidth $color, comma);
+  }
+
+  @return $values;
+}

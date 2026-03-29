@@ -1,0 +1,33 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1.0")
+meta(name="format-detection", content="telephone=no")
+meta(name="robots", content="noindex")
+
+title #{page.title}
+
+meta(content=page.description, name="description")
+meta(content=page.keywords, name="keywords")
+meta(content=page.title, property="og:title")
+meta(content=page.description, property="og:description")
+meta(content=domain + page.image, property="og:image")
+meta(content=domain + page.url, property="og:url")
+meta(content=(key == "top" ? "website" : "article"), property="og:type")
+meta(content="ja_JP", property="og:locale")
+
+link(rel="shortcut icon" href="")
+link(rel="apple-touch-icon" href="")
+link(rel="icon" href="")
+link(rel="stylesheet", href="//fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap")
+link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+if key=='top'
+	link(rel="stylesheet", href=css_path+"/style.css")
+	link(rel="stylesheet", href=css_path+"/style.min.css")
+else if key == 'facilities'
+	link(rel="stylesheet", href=path+css_path+"/style.css?"+dateNow)
+else if key == "about"
+	link(rel="stylesheet", href=path+css_path+"/style.css?"+dateNow)
+else if key == "recruit"
+	link(rel="stylesheet", href=path+css_path+"/style.css?"+dateNow)
+else
+	link(rel="stylesheet", href=path+path+css_path+"/style.css?"+dateNow)

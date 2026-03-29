@@ -1,0 +1,8 @@
+@charset "UTF-8";
+// ===================================================================================
+// 各種WEB FONTカスタマイ用のscssファイルです。
+// 変数はインポートファイルより上に、その他はインポートファイルより下に書いてください。
+// ===================================================================================
+@import "../../../../node_modules/yakuhanjp/dist/scss/yakuhanjp";
+@import "../../../../node_modules/yakuhanjp/dist/scss/yakuhanrp_s";
+@import "../../../../node_modules/yakuhanjp/dist/scss/yakuhanmp.scss";

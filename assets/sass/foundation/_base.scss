@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+// =================================================================
+// Base
+// =================================================================
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+  word-break: break-all;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+
+  @include media(min, sm) {
+    margin: 0;
+  }
+
+  @include media(min, md) {
+    margin: 0;
+  }
+
+  @include media(min, lg) {
+    margin: 0;
+  }
+
+  @include media(min, xl) {
+    margin: 0;
+  }
+  height: 100%;
+  font-feature-settings: "palt";
+  // font-family: $font__family-primary;
+  // color: $color__main-text;
+  // background-color: $color__main-bg;
+  // letter-spacing: $font__letter-spacing-primary;
+  // line-height: $font__line-height-primary;
+  // font-size: $font__size-sp-primary;
+  // font-weight: $font__weight-primary;
+
+  @include media(min, md) {
+    // font-size: $font__size-pc-primary;
+  }
+}
+
+// link
+// 変数設定する
+a {
+  color: #707070;
+
+  // &:visited {
+  //   color: green;
+  // }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #c71a63;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+@include media(min, md) {
+
+  a[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.wrapper {
+  overflow: hidden;
+}

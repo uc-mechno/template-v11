@@ -1,0 +1,110 @@
+.c-background {
+
+  @at-root %background-base {
+    position: relative;
+    height: 500px;
+
+    // @include media(min, md) {
+    //   height: 500px;
+    // }
+  }
+
+  @at-root %background-image {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: initial;
+
+    @include media(min, md) {
+      background-attachment: fixed;
+    }
+  }
+
+  // 背景色
+  // &.-gray {
+  //   background: $color__bg-gray;
+  // }
+
+  // &.-blue {
+  //   background: $color__bg-blue;
+  // }
+
+  // 背景画像
+  &.-image {
+
+    @extend %background-image;
+
+    // TOP
+    &.-about {
+      background-image: url("#{$pathImages}/top/about_bg_sp.jpg");
+
+      @include media(min, md) {
+        background-image: url("#{$pathImages}/top/about_bg_pc.jpg");
+      }
+    }
+
+    &.-recruit {
+      background-image: url("#{$pathImages}/top/recruit_bg_pc.jpg");
+
+      @include media(min, md) {
+        background-image: url("#{$pathImages}/top/recruit_bg_sp.jpg");
+      }
+    }
+
+    &.-thinking {
+      background-image: url("#{$pathImages}/about/thinling_bg_pc.jpg");
+
+      @include media(min, md) {
+        background-image: url("#{$pathImages}/about/thinling_bg_pc.jpg");
+      }
+    }
+
+    &.-efforts {
+      background-image: url("#{$pathImages}/about/efforts_bg_sp.jpg");
+
+      @include media(min, md) {
+        background-image: url("#{$pathImages}/about/efforts_bg_pc.jpg");
+      }
+    }
+
+    &.-overview {
+      background-image: url("#{$pathImages}/about/overview_bg_sp.jpg");
+
+      @include media(min, md) {
+        background-image: url("#{$pathImages}/about/overview_bg_pc.jpg");
+      }
+    }
+  }
+
+  &.-base {
+
+    @extend %background-base;
+  }
+
+  // 透過
+  &.-transp {
+
+    @extend %background-base;
+
+    &::after {
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &.-layout1 {
+    height: 700px;
+
+    @include media(min, sm) {
+      height: 400px;
+    }
+
+    @include media(min, md) {
+      height: 500px;
+    }
+  }
+}

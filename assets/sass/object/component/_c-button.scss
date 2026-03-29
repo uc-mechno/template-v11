@@ -1,0 +1,129 @@
+.c-button {
+
+  @at-root %button-base {
+
+    @include font-transform;
+  }
+
+  &.-primary {
+
+    @extend %button-base;
+    @include margin-auto;
+
+    @include media(min, md) {
+    }
+  }
+
+  &.-secondary {
+
+    @extend %button-base;
+    @include margin-auto;
+
+    @include media(min, md) {
+    }
+  }
+
+  &.-arrow1 {
+    position: relative;
+
+    padding: 5px 40px 5px 20px;
+    transition: all .2s linear;
+    // color: $color__button-text-primary;
+    width: 430px;
+    outline: none;
+    font-size: 1.8rem;
+    width: 310px;
+
+    @include media(min, md) {
+      font-size: 2.5rem;
+      width: 430px;
+      font-size: 2.4rem;
+      padding: 5px 60px 5px 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 30px;
+      // height: 2px;
+      // background: $color__button-bg-secondary;
+      transition: all .2s linear;
+
+      @include media(min, md) {
+        width: 40px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 28%;
+      right: 24px;
+      width: 2px;
+      height: 12px;
+      // background: $color__button-bg-secondary;
+      transform: skewX(45deg);
+      transition: all .2s linear;
+
+      @include media(min, md) {
+        top: 33%;
+        right: 25px;
+      }
+    }
+
+    &:hover {
+      // background: $color__base-200;
+
+      &::before {
+        // background: #fff;
+        right: 15px;
+        width: 30px;
+      }
+
+      &::after {
+        // border-left-color: #fff;
+        right: 20px;
+      }
+    }
+  }
+
+  &.-arrow2 {
+    position: relative;
+    outline: none;
+    // background: $color__button-bg-secondary;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 42%;
+      right: 20px;
+      width: 10px;
+      height: 10px;
+      // border-top: 1px solid $color__button-text-secondary;
+      // border-right: 1px solid $color__button-text-secondary;
+      transform: rotate(45deg);
+      transition: all .2s linear;
+    }
+
+    &:hover {
+
+      &::after {
+        right: 16px;
+      }
+    }
+  }
+
+  &.-rounded {
+  }
+
+  &.-large {
+  }
+
+  &.-medium {
+  }
+
+  &.-small {
+  }
+}

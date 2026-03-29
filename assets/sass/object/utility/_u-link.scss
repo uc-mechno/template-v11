@@ -1,0 +1,9 @@
+.u-linkBlue {
+  color: $color-sky-blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-sky-blue;
+  }
+}

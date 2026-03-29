@@ -1,0 +1,176 @@
+.l-grid {
+  display: grid;
+
+  &.-sp1 {
+    grid-template-columns: none;
+  }
+
+  &.-sp2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.-sp3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.-sp4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.-sp5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &.-sp6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &.-sp7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &.-sp8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  // sm
+  @include media(min, sm) {
+
+    &.-sm1 {
+      grid-template-columns: none;
+    }
+
+    &.-sm2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.-sm3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.-sm4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.-sm5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &.-sm6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.-sm7 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    &.-sm8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @include media(min, md) {
+
+    &.-md1 {
+      grid-template-columns: none;
+    }
+
+    &.-md2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.-md3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.-md4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.-md5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &.-md6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.-md7 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    &.-md8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @include media(min, lg) {
+
+    &.-lg1 {
+      grid-template-columns: none;
+    }
+
+    &.-lg2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.-lg3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.-lg4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.-lg5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &.-lg6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.-lg7 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    &.-lg8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  @include media(min, xl) {
+
+    &.-xl1 {
+      grid-template-columns: none;
+    }
+
+    &.-xl2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.-xl3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.-xl4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.-xl5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &.-xl6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.-xl7 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    &.-xl8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+}

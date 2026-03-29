@@ -1,0 +1,61 @@
+@charset "UTF-8";
+// ===================================================================================
+// bootstrapカスタマイズ用のscssファイルです。
+// 変数はインポートファイルより上に、その他はインポートファイルより下に書いてください。
+// ===================================================================================
+// 変数
+// ===================================================================================
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+// @import "bootstrap/functions";
+// @import "bootstrap/variables";
+// @import "bootstrap/mixins";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../node_modules/bootstrap/scss/mixins/grid-framework";
+@import "../../../node_modules/bootstrap/scss/mixins/grid";
+// @import "bootstrap/mixins/breakpoints";
+// @import "bootstrap/mixins/grid-framework";
+// @import "bootstrap/mixins/grid";
+// @import "bootstrap/root";
+// @import "bootstrap/reboot";
+// @import "bootstrap/type";
+// @import "bootstrap/images";
+// @import "bootstrap/code";
+@import "../../../node_modules/bootstrap/scss/grid";
+// @import "bootstrap/tables";
+// @import "bootstrap/forms";
+// @import "bootstrap/buttons";
+// @import "bootstrap/transitions";
+// @import "bootstrap/dropdown";
+// @import "bootstrap/button-group";
+// @import "bootstrap/input-group";
+// @import "bootstrap/custom-forms";
+// @import "bootstrap/nav";
+// @import "bootstrap/navbar";
+// @import "bootstrap/card";
+// @import "bootstrap/breadcrumb";
+// @import "bootstrap/pagination";
+// @import "bootstrap/badge";
+// @import "bootstrap/jumbotron";
+// @import "bootstrap/alert";
+// @import "bootstrap/progress";
+// @import "bootstrap/media";
+// @import "bootstrap/list-group";
+// @import "bootstrap/close";
+// @import "bootstrap/toasts";
+// @import "bootstrap/modal";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popover";
+// @import "bootstrap/carousel";
+// @import "bootstrap/spinners";
+// @import "bootstrap/utilities";
+@import "../../../node_modules/bootstrap/scss/utilities/align";
+@import "../../../node_modules/bootstrap/scss/utilities/display";
+@import "../../../node_modules/bootstrap/scss/utilities/flex";
+@import "../../../node_modules/bootstrap/scss/utilities/shadows";
+@import "../../../node_modules/bootstrap/scss/utilities/sizing";
+@import "../../../node_modules/bootstrap/scss/utilities/spacing";
+@import "../../../node_modules/bootstrap/scss/utilities/visibility";
+// @import "bootstrap/print";
+// ===================================================================================
+// その他

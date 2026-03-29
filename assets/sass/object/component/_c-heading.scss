@@ -1,0 +1,7 @@
+.c-heading {
+
+  @at-root %heading-base {
+
+    @include font-transform;
+  }
+}

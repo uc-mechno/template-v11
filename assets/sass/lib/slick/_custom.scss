@@ -1,0 +1,29 @@
+@charset "UTF-8";
+// $slick-font-path: "assets/js/plugin/slick/fonts/";
+// ===================================================================================
+// slickカスタマイズ用のscssファイルです。
+// 変数はインポートファイルより上に、その他はインポートファイルより下に書いてください。
+// ===================================================================================
+@import "_slick";
+@import "_slick-theme";
+
+// .slick-prev {
+//   left: 50px;
+
+//   @include media(max, sm) {
+//     left: 10px;
+//   }
+// }
+
+// .slick-next {
+//   right: 50px;
+
+//   @include media(max, sm) {
+//     right: 10px;
+//   }
+// }
+
+// .slick-prev,
+// .slick-next {
+//   z-index: 100;
+// }

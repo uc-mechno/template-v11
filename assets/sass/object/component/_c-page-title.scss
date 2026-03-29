@@ -1,0 +1,90 @@
+.c-page-title {
+  position: relative;
+  padding: 120px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: initial;
+
+  @include media(min, md) {
+    padding: 185px 0;
+  }
+
+  // @include media(min, md) {
+  //   background-attachment: fixed;
+  // }
+
+  &.-bg-facilities {
+    background-image: url("#{$pathImages}/facilities/page-title_pc2.jpg");
+  }
+
+  &.-bg-about {
+    background-image: url("#{$pathImages}/about/page-title_sp1.jpg");
+
+    @include media(min, md) {
+      background-image: url("#{$pathImages}/about/page-title_pc2.jpg");
+    }
+  }
+
+  &.-bg-recruit {
+    background-image: url("#{$pathImages}/recruit/page-title_sp1.jpg");
+
+    @include media(min, md) {
+      background-image: url("#{$pathImages}/recruit/page-title_pc2.jpg");
+    }
+  }
+
+  &.-bg-day {
+    background-image: url("#{$pathImages}/facilities/dayservice-yahiko/page_title_sp1.jpg");
+
+    @include media(min, md) {
+      background-image: url("#{$pathImages}/facilities/dayservice-yahiko/page_title_pc1.jpg");
+    }
+  }
+
+  &.-bg-approach {
+    background-image: url("#{$pathImages}/about/approach/page_title_sp1.jpg");
+
+    @include media(min, md) {
+      background-image: url("#{$pathImages}/about/approach/page_title_pc1.jpg");
+    }
+  }
+
+  &.-bg-overview {
+    background-image: url("#{$pathImages}/about/overview/page_title_sp1.jpg");
+
+    @include media(min, md) {
+      background-image: url("#{$pathImages}/about/overview/page_title_pc1.jpg");
+    }
+  }
+
+  &__inner {
+    max-width: 760px;
+
+    @include margin-auto;
+    padding: 0 $sp-padding;
+
+    @include media(min, md) {
+      padding: 0 $pc-padding;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    font-family: $font__family-rounded;
+    line-height: $font__line-height-title;
+    font-size: 3.2rem;
+    background: rgba(#fff, .85);
+    padding: {
+      top: fs(8, 40, "em");
+      left: fs(60, 40, "em");
+      bottom: fs(8, 40, "em");
+      right: fs(60, 40, "em");
+    }
+    letter-spacing: .25em;
+
+    @include media(min, md) {
+      font-size: 4rem;
+    }
+  }
+}

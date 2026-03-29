@@ -1,0 +1,26 @@
+doctype html
+block vars
+html(lang="ja")
+	head
+		include ./include/_head
+
+	body(class=key)
+
+		.wrapper
+
+				include ./include/_header
+
+				include ./include/_nav
+
+				if key !== 'top'
+					include ./include/_breadcrumb
+
+				include ./include/_hero
+
+				block contents
+
+				include ./include/_footer
+
+		// wrapper
+
+	include ./include/_script

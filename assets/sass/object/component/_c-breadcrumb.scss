@@ -1,0 +1,28 @@
+.c-breadcrumb {
+  background-color: #f5e7ed;
+
+  &__inner {
+    max-width: $pc-content-width;
+    padding: 5px $sp-padding;
+    font-size: 1.4rem;
+
+    @include margin-auto;
+
+    @include media(min, md) {
+      padding: 7px $pc-padding;
+      font-size: 1.6rem;
+      padding: 8px $pc-padding;
+      font-size: 1.4rem;
+    }
+
+    span {
+
+      a {
+
+        span {
+          // color: $color__link-main;
+        }
+      }
+    }
+  }
+}

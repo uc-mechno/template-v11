@@ -1,0 +1,130 @@
+/* ==================================================
+　5-3-1 中心から外に線が伸びる（下部）
+=================================== */
+
+.sass-test {
+  display: flex;
+  display: grid;
+  appearance: none;
+}
+
+.p-header__nav-item li a {
+
+  /* 線の基点とするためrelativeを指定 */
+  position: relative;
+}
+
+.p-header__nav-item li.current a,
+.p-header__nav-item li a:hover {
+  color: #c71a63;
+}
+
+.p-header__nav-item li a::after {
+  content: "";
+
+  /* 絶対配置で線の位置を決める */
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+
+  /* 線の形状 */
+  width: 80%;
+  height: 2px;
+  background: #c71a63;
+
+  /* アニメーションの指定 */
+  transition: all .3s;
+  transform: scale(0, 1); /* X方向0、Y方向1 */
+  transform-origin: center top; /* 上部中央基点 */
+}
+
+/* 現在地とhoverの設定 */
+.p-header__nav-item li.current a::after,
+.p-header__nav-item li a:hover::after {
+  transform: scale(1, 1); /* X方向にスケール拡大 */
+}
+
+/* ==================================================
+　5-3-5 左から右に背景が伸びる
+=================================== */
+
+/* 背景の設定 */
+
+.c-page-nav li a {
+
+  /* 背景色の基点とするためrelativeを指定 */
+  position: relative;
+}
+
+.c-page-nav li a::after {
+  content: "";
+
+  /* 絶対配置で線の位置を決める */
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+
+  /* 背景の形状 */
+  width: 0;
+  height: 100%;
+  background: #f5e7ed;
+
+  /* アニメーションの指定 */
+  transition: all .5s;
+  opacity: 0; /* はじめは透過0 */
+}
+
+/* 現在地とhoverの設定 */
+.c-page-nav li.current a::after,
+.c-page-nav li a:hover::after {
+
+  /* 背景の形状 */
+  width: 100%; /* 横幅を伸ばす */
+  opacity: 1; /* 不透明に */
+}
+
+.c-page-nav li.current a,
+.c-page-nav li a:hover {
+  color: #707070;
+}
+
+.prefix {
+  appearance: none;
+  user-select: none;
+  display: flex;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.prefix2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.prefix2 {
+  display: flex;
+}
+
+.prefix2 {
+  display: flex;
+}
+
+.prefix2 {
+  display: flex;
+}
+
+.prefix2 {
+  display: flex;
+}
+
+#test {
+  appearance: none;
+  user-select: none;
+}
+
+#test2 {
+  appearance: none;
+  user-select: none;
+}

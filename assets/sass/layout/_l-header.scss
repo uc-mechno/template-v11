@@ -1,0 +1,16 @@
+.l-header {
+
+  @include box-shadow(0 3px 6px 0 rgba(0, 0, 0, .16));
+
+  &__inner {
+    // max-width: $pc-content-width;
+
+    @include margin-auto;
+
+    @include media(min, md) {
+      display: flex;
+      align-items: center;
+      text-align: end;
+    }
+  }
+}

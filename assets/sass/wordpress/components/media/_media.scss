@@ -1,0 +1,53 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 5px 8px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 8px 5px 0;
+}
+
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+  max-width: 100%;
+}
+
+.entry-1 img[class*="wp-image-"],
+.entry-1 img[class*="attachment-"] {
+  margin: 5px;
+}
+
+.af-box {
+  overflow: hidden;
+}
+
+.af-box li {
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.af-box .first {
+  margin-left: 0;
+}

@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+// =================================================================
+// Mixin
+// =================================================================
+
+// --- breakpoints ---
+
+@mixin media($type, $bp1, $bp2: 0) {
+
+  @if ($type == min) {
+
+    @media screen and (min-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  }
+
+  @else if ($type == max) {
+
+    @media screen and (max-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  }
+
+  @else if ($type == between) {
+
+    @media screen and (min-width: #{map-get($breakpoints, $bp1)}) and (max-width: #{map-get($breakpoints, $bp2)}) {
+      @content;
+    }
+  }
+}
+
+// ----
+//  @@include hover(false) {
+// true = opacity: .8;の設定
+// false = opacity: none;
+//  ここにhoverのプロパティを書く
+// }
+// ----
+// https://web-guided.com/376/
+@mixin hover($flag: true) {
+
+  &:hover {
+    transition: all .2s linear;
+
+    @if $flag == true {
+      opacity: .8;
+    }
+    @content;
+  }
+}
+
+@mixin link-full($flag: true) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  @if $flag == true {
+    z-index: 2;
+  }
+}
+
+// ----
+//  @include calc(width, "100% / 4");
+//  @include calc(width, "(100% - 15px) / 2");
+// ----
+// calc
+@mixin calc($property, $expression) {
+  #{$property}: calc(#{$expression});
+}
+
+// border
+@mixin border($color, $border-width) {
+  border: solid $color $border-width;
+}
+
+// border-top
+@mixin border-top($color, $border-width) {
+  border-top: solid $color $border-width;
+}
+
+// border-bottom
+@mixin border-bottom($color, $border-width) {
+  border-bottom: solid $color $border-width;
+}
+
+// font-smoothing
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Windowsもフォントをきれいに
+@mixin font-transform {
+  transform: rotate(.028deg);
+  -ms-transform: rotate(.028deg);
+  -webkit-transform: rotate(.028deg);
+}
+
+// justify
+@mixin text-align-justify {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+// margin
+@mixin margin($t, $r, $b, $l) {
+  margin:
+    ($t / $orig-md) * 100% ($r / $orig-md) * 100% ($b / $orig-md) * 100%
+    ($l / $orig-md) * 100%;
+}
+
+// padding
+@mixin padding-md($t, $r, $b, $l) {
+  padding:
+    ($t / $orig-md) * 100% ($r / $orig-md) * 100% ($b / $orig-md) * 100%
+    ($l / $orig-md) * 100%;
+}
+
+// margin xl
+@mixin margin-xl($t, $r, $b, $l) {
+  margin:
+    ($t / map-get($breakpoints, xl)) * 100%
+    ($r / map-get($breakpoints, xl)) * 100% ($b / map-get($breakpoints, xl)) *
+    100% ($l / map-get($breakpoints, xl)) * 100%;
+}
+
+// padding xl
+@mixin padding-xl($t, $r, $b, $l) {
+  padding:
+    ($t / map-get($breakpoints, xl)) * 100%
+    ($r / map-get($breakpoints, xl)) * 100% ($b / map-get($breakpoints, xl)) *
+    100% ($l / map-get($breakpoints, xl)) * 100%;
+}
+// 使い方 @include padding-xl(80px, 120px, 80px, 40px);
+
+// border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  background-clip: padding-box; /* stops bg color from leaking outside the border: */
+}
+
+// box_shadow
+@mixin box_shadow($value...) {
+  box-shadow: $value;
+}
+
+// text-shadow
+@mixin text-shadow($value...) {
+  text-shadow: $value;
+}
+
+// background-color
+// @mixin background-color($value...) {
+//   background-color: rgba($value);
+// }
+
+// clearfix
+@mixin clearfix {
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  display: block;
+}
+
+// 要素を幅いっぱいに
+@mixin full-width {
+  padding-left: 200%;
+  padding-right: 200%;
+  margin-left: -200%;
+  margin-right: -200%;
+}
+
+// margin auto
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// em %の指定
+// ----
+//  font-size: fs(13, 16, "em");
+//  font-size: fs(13, 16, "%");
+// ----
+@function fs($size, $context, $unit: em) {
+
+  @if $unit == "%" {
+
+    @return #{$size/$context * 100}#{$unit};
+  }
+  // "vw"追加
+  @else if $unit == "vw" {
+
+    @return #{$size/$context * 100}#{$unit};
+  }
+
+  @else {
+
+    @return #{$size/$context}#{$unit};
+  }
+}
+
+// Responsive Movie
+@mixin rwd-iframe($width: 16, $height: 9) {
+  position: relative;
+  padding-top: percentage($height / $width);
+  width: 100%;
+  height: 100%;
+
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+// line-heightの計算
+// ----
+//  font-size: fs(13, 16, "em");
+//  https://simpleism.net/2015/06/true-margin/
+// ----
+$baseMargin: 30px;
+$pFontSize: 4.5rem;
+$pLineHeight: 1.5;
+
+@mixin marginBottom($baseMargin: 30px, $pFontSize: 4.5rem, $pLineHeight: 1.5) {
+  margin-bottom:
+ calc(#{$baseMargin} - (((#{$pFontSize} * #{$pLineHeight}) - #{$pFontSize}) / 2));
+}
+
+// remの計算
+// ----
+//   @include rem(16);
+// ----
+@mixin rem($size) {
+  font-size: $size + px;
+  font-size: ($size / 16) + rem;
+}
+
+@function get_vw($size, $viewport: 768) {
+  $rate: 100 / $viewport;
+
+  @return $rate * $size * 1vw;
+}
+
+// vwの計算
+// ----
+//   @include rem(16);
+// ----
+@mixin fz_vw($font_size: 10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}

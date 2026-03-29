@@ -1,0 +1,40 @@
+.c-page-top {
+  // background: $color__bg-accent-pink;
+  pointer-events: none;
+  text-align: center;
+
+  padding: 10px 0;
+
+  @include media(min, md) {
+    text-align: center;
+    background: none;
+    padding: 0;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100;
+    text-align: initial;
+  }
+
+  &__img {
+    pointer-events: auto;
+
+    .-sp {
+      display: inline-block;
+
+      @include media(min, md) {
+        display: none;
+      }
+    }
+
+    .-pc {
+      display: none;
+      filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, .46));
+      opacity: .86;
+
+      @include media(min, md) {
+        display: inline-block;
+      }
+    }
+  }
+}

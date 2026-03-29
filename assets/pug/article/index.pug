@@ -1,0 +1,11 @@
+extends ../_layout
+
+block vars
+	include ../_config
+	- var key = "article"
+	- var page = pages[key]
+
+block contents
+	main.main(role="main")
+		p ここにarticleコンテンツ
+	// main

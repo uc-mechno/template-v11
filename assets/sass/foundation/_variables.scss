@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+// =================================================================
+// Variables
+// =================================================================
+
+// --- path ---
+$pathImages: "../images";
+
+// --- breakpoints ---
+// --- bootstrap ---
+$breakpoints: (
+  // "xs": 575px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
+) !default;
+
+// --- tailwind css ---
+// $breakpoints: (
+//   "xxls": 415px,
+//   "xls": 480px,
+//   "sm": 640px,
+//   "md": 768px,
+//   "lg": 1024px,
+//   "xl": 1280px,
+// ) !default;
+
+// --- site width ---
+$pc-content-width: 1110px !default;
+$sp-content-width: 768px !default;
+
+// $pc-site-width: 1200px !default;
+// $sp-site-width: 480px !default;
+
+// $pc__max-site-width: 1920px !default;
+// $sp__max-site-width: 768px !default;
+
+// --- site padding ---
+$pc-padding: 20px !default;
+$sp-padding: 15px !default;
+
+// --- site margin ---
+
+// --- color ---
+$color-black: #000;
+$color-white: #fff;
+$color-blue: #33f;
+$color-sky-blue: #12a4ff;
+$color-red: #c90926;
+$color-pink: #c71a63;
+$color-yellow: #f2edca;
+$color-green: #417967;
+
+// --- color brands---
+$color-twitter: #1da1f2;
+$color-facebook: #3c5a99;
+$color-line: #00b900;
+$color-googlePlus: #dd5144;
+$color-youtube: #da1725;
+
+// --- color gray ---
+$color__gray-600: #333;
+$color__gray-500: #797979;
+$color__gray-400: #a3a3a3;
+$color__gray-300: #d1d1d1;
+$color__gray-200: #eee;
+$color__gray-100: #f9f9f9;
+
+// --- color base ---
+$color__base-600: #dca6bb;
+$color__base-500: #e0b2c5;
+$color__base-400: #e5bece;
+$color__base-300: #eacad7;
+$color__base-200: #efd6e0;
+$color__base-100: #f4e2e9;
+
+// --- color main ---
+$color__main: #eacad7;
+
+// --- color sub ---
+// $color__sub: #f2cadb;
+
+// --- color accent ---
+$color__accent-danger: red;
+$color__accent-warning: yellow;
+
+// --- color set text ---
+$color__text-primary: #707070;
+
+// --- color set background ---
+$color__bg-primary: #fff;
+
+// --- color set button ---
+$color__button-bg-primary: #fff;
+$color__button-bg-secondary: #333;
+
+// --- color set border ---
+$color__border-primary: #fff;
+$border__width-primary: 1px;
+
+// --- color set link ---
+$color__link: #707070;
+$color__link-hover: #707070;
+
+// --- color set icon ---
+$color__icon-primary: #fff;
+
+// --- font family---
+$font__family-primary: Yakuhanjp, "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", "BIZ UDPGothic", "Meiryo", sans-serif;
+$font__family-rounded: Yakuhanrps, "M PLUS Rounded 1c", sans-serif;
+$font__family-en: "Oswald", sans-serif;
+
+$font__line-height-title: 1.5;
+// --- font main ---
+$font__size-sp-primary: 1.4rem;
+$font__size-pc-primary: 1.6rem;
+// --- font lead ---
+$font__size-sp-primary-lead: 1.8rem;
+$font__size-pc-primary-lead: 2rem;
+// --- font h1 ---
+$font__size-sp-primary-h1: 3.2rem;
+$font__size-pc-primary-h1: 4rem;
+// --- font h2 ---
+$font__size-sp-primary-h2: 3.2rem;
+$font__size-pc-primary-h2: 4rem;
+// --- font h3 ---
+$font__size-sp-primary-h3: 3.2rem;
+$font__size-pc-primary-h3: 4rem;
+// --- font h4 ---
+$font__size-sp-primary-h4: 3.2rem;
+$font__size-pc-primary-h4: 4rem;
+// --- font h5 ---
+$font__size-sp-primary-h5: 3.2rem;
+$font__size-pc-primary-h5: 4rem;
+
+// --- site font-weight ---
+$weight-xs: 100 !default;
+$weight-sm: 300 !default;
+$weight-md: 500 !default;
+$weight-lg: 600 !default;
+$weight-sm: 700 !default;
+$weight-xl: 900 !default;
+
+// --- site line-height ---
+$leading-none: 1 !default;
+$leading-sm: 1.25 !default;
+$leading-md: 1.5 !default;
+$leading-lg: 1.75 !default;
+$leading-xl: 1.7 !default;
+
+// --- site letter-spacing ---
+$spacing-none: 0 !default;
+$spacing-sm: .025em !default;
+$spacing-md: .05em !default;
+$spacing-lg: .075em !default;
+$spacing-xl: .1em !default;

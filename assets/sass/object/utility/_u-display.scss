@@ -1,0 +1,71 @@
+.u-sp {
+  display: block;
+
+  &.-sm {
+    display: none;
+
+    @include media(min, sm) {
+      display: block;
+    }
+  }
+
+  &.-md {
+    display: none;
+
+    @include media(min, md) {
+      display: block;
+    }
+  }
+
+  &.-lg {
+    display: none;
+
+    @include media(min, lg) {
+      display: block;
+    }
+  }
+
+  &.-xl {
+    display: none;
+
+    @include media(min, xl) {
+      display: block;
+    }
+  }
+}
+
+.u-pc {
+  display: none;
+
+  &.-sm {
+    display: block;
+
+    @include media(min, sm) {
+      display: none;
+    }
+  }
+
+  &.-md {
+    display: block;
+
+    @include media(min, md) {
+      display: none;
+    }
+  }
+
+  &.-lg {
+    display: block;
+
+    @include media(min, lg) {
+      display: none;
+    }
+  }
+
+  &.-xl {
+    display: block;
+
+    @include media(min, xl) {
+      display: none;
+    }
+  }
+}
